@@ -1,8 +1,11 @@
 sentence = input('Please enter a sentence:')
 
-split_sentence = sentence.split(' ')
+def alphasort(sentence):
 
-split_set = set(split_sentence)
-ordered = ' '.join(sorted(split_set, key=str.lower))
+    split_sentence = sentence.split(' ')
 
-print(ordered)
+    split_set = set(split_sentence)
+    ordered = ' '.join(sorted(split_set, key=str.lower))
+    return ordered
+
+print(alphasort(sentence))
