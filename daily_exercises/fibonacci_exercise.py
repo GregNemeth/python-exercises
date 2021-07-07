@@ -14,5 +14,5 @@ def fibonacci(n):
             n2 = next
         return n2
 
-# n = int(input("enter n:"))
-# print(fibonacci(n))
+n = int(input("enter n:"))
+print(fibonacci(n))
