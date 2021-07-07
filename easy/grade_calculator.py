@@ -1,29 +1,24 @@
-print('Welcome to grade calculator \n')
-
-maths_mark = int(input('Please input your math mark:'))
-chemistry_mark = int(input('Please input your math mark:'))
-physics_mark = int(input('Please input your math mark:'))
 
 def grade_calculator(maths_mark, chemistry_mark, physics_mark):
-    average_grade = (maths_mark + chemistry_mark + physics_mark) / 3
+    average_grade = int((maths_mark + chemistry_mark + physics_mark) / 3)
+    results = {
+        70 : 'A',
+        60 : 'B',
+        50 : 'C',
+        40 : 'D'
+    }
+    for boundary, grade in results.items():
+        if average_grade >= boundary:
+            return f'Your average score is : {average_grade}% You scored a grade of: {grade}'
+        else:
+            return f'Your average score is : {average_grade}. You failed'
+    
 
+if __name__ == "__main__":
+    print('Welcome to grade calculator \n')
 
-    grade = 'You failed'
+    maths_mark = int(input('Please input your math mark:'))
+    chemistry_mark = int(input('Please input your math mark:'))
+    physics_mark = int(input('Please input your math mark:'))
 
-    if average_grade < 40:
-        grade = 'You failed'
-    elif average_grade >= 40 and average_grade < 50:
-        grade = 'D'
-    elif average_grade >= 50 and average_grade < 60:
-        grade = 'C'
-    elif average_grade >= 60 and average_grade < 70:
-        grade = 'B'
-    else:
-        grade = 'A'
-
-    your_score = f'Your average score is : {average_grade}%'
-    your_grade = f'You scored a grade of: {grade}'
-
-    return f'{your_score}\n{your_grade}'
-
-print(grade_calculator(maths_mark, chemistry_mark, physics_mark))
+    print(grade_calculator(maths_mark, chemistry_mark, physics_mark))

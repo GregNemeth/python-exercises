@@ -1,8 +1,8 @@
 
-isbn = '978-0-306-40615-'
+isbn_no = '978-0-306-40615-'
 
-def isbn_func(isbn):
-    isbn_formatted = isbn.replace('-', '')  #formats the string
+def isbn_func(isbn_no):
+    isbn_formatted = isbn_no.replace('-', '')  #formats the string
 
     counter = 0       # to keep track of index in isbn_formatted
     digit_12 = 0    # for adding up digits
@@ -17,9 +17,9 @@ def isbn_func(isbn):
             counter += 1
 
     final_digit = 10 - (digit_12 % 10)  # calculate the final digit
-    isbn_complete = list(isbn)      # converts isbn to list so we can use .append
+    isbn_complete = list(isbn_no)      # converts isbn to list so we can use .append
     isbn_complete.append(str(final_digit)) # attach last digit
     var = ''.join(isbn_complete)   # format and print the output
     return var
 
-print(isbn_func(isbn))
+print(isbn_func(isbn_no))
