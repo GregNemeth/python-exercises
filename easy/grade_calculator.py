@@ -9,9 +9,9 @@ def grade_calculator(maths_mark, chemistry_mark, physics_mark):
     }
     for boundary, grade in results.items():
         if average_grade >= boundary:
-            return f'Your average score is : {average_grade}% You scored a grade of: {grade}'
-        else:
-            return f'Your average score is : {average_grade}. You failed'
+            return f'Your average score is : {average_grade} You scored a grade of: {grade}'
+    else:
+        return f'Your average score is : {average_grade}. You failed'
     
 
 if __name__ == "__main__":

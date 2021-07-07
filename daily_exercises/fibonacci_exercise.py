@@ -14,5 +14,6 @@ def fibonacci(n):
             n2 = next
         return n2
 
-n = int(input("enter n:"))
-print(fibonacci(n))
+if __name__ == "__main__":
+    n = int(input("enter n:"))
+    print(fibonacci(n))
